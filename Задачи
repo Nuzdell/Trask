@@ -1,0 +1,202 @@
+public class Trask1 {
+
+    //Даны стороны двух треугольников.
+    // Найти сумму их периметров и сумму ихплощадей.
+    // (Определить процедуру для расчета периметра и площадитреугольника по его сторонам.)
+
+    public static  void  main(String[] args) {
+        int a = 3;
+        int b = 4;
+        int c = 5;
+        int a1 = 3;
+        int b1 = 4;
+        int c1 = 5;
+
+        int p = perimetr( a, b, c);
+        int p1 = perimetr( a1, b1, c1);
+        System.out.println("p = "+ p);
+        System.out.println("P1 = "+ p1);
+
+        double s = squere(p,a,b,c);
+        double s1 = squere(p,a,b,c);
+        System.out.println("S =" + squere(p,a,b,c));
+        System.out.println("S1 =" + squere(p1,a1,b1,c1));
+
+        System.out.println("Сумма периметров = " + (p + p1 ));
+        System.out.println("Сумма площядей = " + (s + s1));
+
+
+    }
+
+    public static int perimetr(int a,int b,int c){
+        return  a + b + c;
+    }
+
+    public static double squere(int p, int a, int b, int c) {
+        int pp = p/2;
+        return Math.sqrt(pp *(pp - a) * (pp - b) * (pp - c));
+    }
+
+
+}
+
+
+
+
+public class Trask2 {
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+            System.out.print(20 + " ");
+        }
+    }
+}
+
+
+
+
+
+public class Trask3 {
+
+    public static void main(String[] args){
+        for (int i = 10; i <= 25; i++) {
+            System.out.println( i + " " + (i + 0.4));
+        }
+    }
+
+}
+
+
+
+import java.util.Scanner;
+
+public class Trask4 {
+
+    public static void main (String[] args){
+        // 1
+        int sum = 0;
+        for (int i = 100; i < 500; i++) {
+          sum += i;//sum = sum + 1;
+        }
+        System.out.println(sum);
+
+        // 2
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ведите числа a, b, где b>=a");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        if (b >= a) {
+            int sum1 = 0;
+            for(int i = a; 1 < b; i++) {
+                sum1 += i; //sum = sum + i
+            }
+            System.out.println(sum1);
+        } else {
+            System.out.println("b < a ведите другие числа");
+        }
+
+    }
+}
+
+
+
+
+import java.util.Scanner;
+
+public class Trask5 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ведите n ");
+        int n = sc.nextInt();
+
+        double sum = 0;
+        for (int i = 1; i <= n; i++) {
+            System.out.println("Ведите число");
+            double number = sc.nextDouble();
+            sum += number;
+        }
+
+        System.out.println("Среднее арифметическое" + sum/n);
+
+
+
+    }
+}
+
+
+
+public class Trask6 {
+
+    //public static void main(String[] args) {
+    //  for (int i = 10; i < 30; i++) {
+    //    System.out.println(i);
+    //}
+
+
+    //int start = 10;
+      //  do
+
+    //{
+
+      //  System.out.println(start);
+        //start++;
+
+   // }   while(start < 30);
+}
+
+
+
+
+import java.util.Scanner;
+
+public class Trask7 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ведите несколько чисел, после ввода 0 ввод считается законченным");
+
+
+        int number = 0;
+        int sum = 0;
+        int caunt = 0;
+        do {
+            number = sc.nextInt();
+            sum += number;
+            caunt++;
+        } while (number != 0 );
+
+            System.out.println("Сумма всех чисел =" + sum);
+            System.out.println("Колтчество всех чисел = " + caunt);
+
+        }
+    }
+
+
+import java.util.Scanner;
+
+public class Trask8 {
+
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int naturalNumber = sc.nextInt();
+
+        int min = 9;
+        int max = 0;
+        while (naturalNumber/10 !=0); {
+            int digit = naturalNumber % 10;
+            naturalNumber = naturalNumber /10;
+            if (digit > max){
+                max =digit;
+            }
+            if (digit < max){
+                min = digit;
+            }
+        }
+
+        System.out.println("Max =" + max);
+        System.out.println("Min =" + min);
+    }
+
+}
