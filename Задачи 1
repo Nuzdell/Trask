@@ -1,0 +1,242 @@
+public class Demo {
+
+    public static void main(String[] args) {
+        //тип_данных названиние_пременной - значение
+        int number = 5;
+        //статическая типизация
+        short digit = 1;
+        digit = 3;
+        digit = 'c';
+        //digit = 124982094
+
+        //const
+        final String string = "Hello World";
+        //string = "Hi";
+
+        int result2 = 2 * (3 + 5);
+
+        System.out.println("it is string");
+        System.out.print(result2);
+        System.out.println();
+
+
+
+    }
+}
+
+public class Trask1 {
+
+    public static void main(String[] args) {
+        int days = 234;
+        int weeks = days / 7;
+        int months = days / 30;
+        System.out.println("Количество недель = " + weeks);
+        System.out.println("Количество месяцев = " + months);
+    }
+}
+
+public class Task2 {
+
+    public static void main(String[] args) {
+
+        int number = 31;
+
+        int decimals = number / 10;
+        int units = number % 10;
+        int sum = decimals + units;
+        int product = decimals * units;
+
+
+        System.out.printf(
+                "Количество дестятков - %d, колочиство едениц - %d\nСумма цифр - %d, произведение цифр -%d",
+                decimals,
+                units,
+                sum,
+                product
+        );
+    }
+}
+
+public class Test {
+
+    public static void main(String[] args) {
+        //тип_данных название_переменной = значение
+        int number = 5;
+
+        //статическая типизация
+        short digit = 1;
+        digit = 3;
+        digit = 'c';
+        //digit = 124982094;
+
+        System.out.println(digit);
+
+        //const
+        final String string = "Hello World!";
+        //string = "Hi!";
+
+        //типы данных
+        byte byteValue = 1;
+        short shortValue = -20;
+        int intValue = -1234;
+        long longValue = 1029222;
+
+        char charValue = 'r';
+        String stringValue = "Text^2&";
+
+        boolean bool = true;
+
+        double doubleValue = 12.8;
+        float floatValue = 15.89232323F;
+
+        //арифметические операции
+        int sum = 2 + 2;
+        int result = 20 - 5;
+        int proiz = 3 * 5;
+
+        int del = 20 / 4; //5
+        int del2 = 21 / 4; //5
+        int del3 = 21 % 4; //1
+
+        //2 * (3 + 5)
+        int result2 = 2 * (3 + 5);
+
+        int increment = 1;
+        increment++; // increment = increment + 1;
+        ++increment;
+
+        int sum2 = 2 - increment++; //sum2 = 2 - increment; increment = increment + 1;
+        int sum3 = 2 - ++increment; //increment = increment + 1; sum2 = 2 - increment;
+
+        System.out.println(sum2);
+        System.out.println(sum3);
+
+        //Вывод
+        //println printf print
+        System.out.println("It is a string");
+        System.out.print(result2 + ", ");
+        System.out.print(del3 + "\n");
+        System.out.printf("I am %d old\n", 90);
+        System.out.printf("I am %d old\n", del2);
+
+        //Преобразование типов данных
+        char c = 'c';
+        System.out.println(c);
+
+        double result3 = 5 / 4.0;
+        System.out.println(result3);
+
+        int result4 = (int) 56.7;
+        System.out.println(result4);
+    }
+}
+
+
+
+public class Trask3 {
+
+    //Напишите метод, который бы возвращал в консоль:true, если число больше 5 и false, если число меньше 5
+
+    public static void  main(String[] args){
+        printNumberToLine(2);
+        printNumberToLine(3);
+        printNumberToLine(9);
+        printNumberToLine(5);
+    }
+
+    public static void printNumberToLine(int a) {
+        System.out.printf("%d %d %d %d %d %d \n", a,a,a,a,a,a);
+
+    }
+}
+
+
+import java.util.Scanner;
+
+public class Trask4 {
+
+    public static void  main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Вывидите число");
+        int number = sc.nextInt();
+
+        greaterThan5(number);
+        System.out.println("Результат:" + greaterThan5(number));
+
+    }
+
+    public static boolean greaterThan5(int number) {
+        boolean result = true;
+        if (number < 5){
+            result =false;
+        }
+        return result;
+    }
+}
+
+
+public class Trask5 {
+    //Напечатать числа в виде следующей
+    // таблицы:55 55 5 55 5 5 55 5 5 5 54.
+    // Напечатать полную таблицу сложения в виде:
+
+    public static void  main(String[] args) {
+        printToPyramid(5, 1);
+        System.out.println();
+        printToPyramid(5, 2);
+        System.out.println();
+        printToPyramid(5, 3);
+        System.out.println();
+        printToPyramid(5, 4);
+        System.out.println();
+        printToPyramid(5, 5);
+        System.out.println();
+    }
+    public  static  void printToPyramid(int number, int caunt) {
+        if (caunt > 1) {
+            caunt--;
+            printToPyramid(number,caunt);
+        }
+        System.out.print(number + " ");
+    }
+
+}
+
+
+public class Trask6{
+
+    // Напечатать полную таблицу сложения в виде:
+     // 1 + 1 = 2  1 + 2 = 3... 1 + 9 = 10
+     // 2 + 1 = 3  2 + 2 = 4... 2 + 9 = 11
+     // ...
+     // 9 + 1 = 10  9 + 2 = 11... 9 + 9 = 18
+
+    public static void main(String[] args) {
+        printTAble(1, 1);
+        System.out.println();
+        printTAble(2, 1);
+        System.out.println();
+        printTAble(3, 1);
+        System.out.println();
+        printTAble(4, 1);
+        System.out.println();
+        printTAble(5, 1);
+        System.out.println();
+        printTAble(6, 1);
+        System.out.println();
+        printTAble(7, 1);
+        System.out.println();
+        printTAble(8, 1);
+        System.out.println();
+        printTAble(9, 1);
+
+     }
+
+     public static void printTAble(int a, int b) {
+         if (b<=9){
+             System.out.printf("%b + %b = %b ",a , b, a + b);
+             b++;
+             printTAble(a,b);
+         }
+     }
+ }
